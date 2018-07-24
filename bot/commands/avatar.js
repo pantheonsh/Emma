@@ -20,10 +20,10 @@ class AvatarCommand {
         let firstMention = msg.mentions.users.first();
         if(firstMention) user = firstMention;
 
-		const embed = new Discord.RichEmbed();
-		embed.setColor(msg.guild.member(user).displayColor);
-		embed.setAuthor(`Avatar de ${user.tag}`, user.displayAvatarURL, user.displayAvatarURL);
-		embed.setImage(user.displayAvatarURL);
-		msg.reply({embed});
+	const embed = new Discord.RichEmbed();
+	embed.setColor(msg.guild.member(user).displayColor);
+	embed.setAuthor(`Avatar de ${user.tag}`, user.displayAvatarURL, user.displayAvatarURL);
+	embed.setImage(user.displayAvatarURL);
+	msg.reply({embed});
     }
 }
